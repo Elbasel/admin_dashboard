@@ -1,0 +1,41 @@
+@use 'reset.css';
+@use 'sass:math';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+$primary-dark: #181a1b;
+$secondary-dark: #2b2f31;
+$dark-blue: #004daa;
+$text-white: #d8d4cf;
+$caption-white: #e8e6e3;
+$primary-font: 'Montserrat', sans-serif;
+
+/* ========== END Dark Mode Colors ========== */
+/* To use background images thourgh  url, use it in Javasciprt using 
+import asset statment and e.style.background = `${importedImage}` */
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 3.5fr;
+    background-color: $primary-dark;
+}
+
+aside {
+    background-color: blue;
+}
+
+.hero {
+    background-color: white;
+
+    display: grid;
+    grid-template-rows: 200px auto;
+
+    header {
+        background-color: red;
+    }
+
+    main {
+        background-color: yellow;
+    }
+}

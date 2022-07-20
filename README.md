@@ -1,2 +1,4 @@
-# admin_dashboard
-an admin dashboard made for the odin project
+# boilerplate
+
+
+# Webpack Boilerplate to start a new project
