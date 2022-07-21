@@ -4,7 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
 
 $primary-dark: #181a1b;
+// $primary-dark: #0f172a;
 $secondary-dark: #2b2f31;
+$third-dark: #27272a;
 $dark-blue: #004daa;
 $text-white: #d8d4cf;
 $caption-white: #e8e6e3;
@@ -19,15 +21,20 @@ body {
     font-family: $primary-font;
     font-size: 16px;
 
-    background-color: $primary-dark;
+    // background-color: $primary-dark;
+    background-color: $third-dark;
 
     display: grid;
-    grid-template-columns: minmax(250px, 1fr) 3.5fr;
+    grid-template-columns: minmax(250px, 1fr) 4fr;
 }
 
 aside {
     display: grid;
     grid-template-rows: 110px auto;
+    background-color: $primary-dark;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
 
     .logo {
         display: flex;
@@ -92,34 +99,174 @@ aside {
 }
 
 .hero {
-    background-color: white;
+    // background-color: white;
 
     display: grid;
     grid-template-rows: 200px auto;
 
     header {
-        background-color: red;
+        // background-color: red;
         display: grid;
-        padding: 32px;
+        // gap: 32px;
+        // padding: 32px;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: $third-dark;
+        box-shadow: 30px 5px 10px rgba(0, 0, 0, 0.4);
+    }
 
-        section {
-            display: grid;
-            border: 1px solid white;
-            align-items: center;
-        }
-
-        .section-one {
-            display: grid;
-            grid-template-columns: auto 1fr auto auto;
-
-            svg {
-                width: 30px;
-                color: white;
-            }
-        }
+    section {
+        padding: 16px;
     }
 
     main {
-        background-color: yellow;
+        background-color: #52525b;
+        // background-color: yellow;
+    }
+}
+
+.section-one {
+    // border: 1px solid white;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto auto;
+    grid-auto-flow: column;
+    gap: 16px;
+
+    .search-icon {
+        margin-left: 32px;
+    }
+    svg {
+        width: 30px;
+        color: white;
+    }
+
+    svg:active {
+        transform: scale(0.9);
+    }
+
+    input {
+        // background-color: black;
+        height: 50px;
+        border-radius: 18px;
+        border: none;
+        max-width: 600px;
+        padding: 12px;
+        font-size: 1.2rem;
+    }
+
+    .notification-icon {
+        margin-right: 35px;
+        max-width: 24px;
+    }
+
+    .profile {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 16px;
+        align-items: center;
+        margin-right: 60px;
+        img {
+            max-width: 40px;
+            border-radius: 50%;
+        }
+
+        p {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: white;
+            letter-spacing: 3px;
+        }
+    }
+}
+
+.section-two {
+    display: flex;
+    // align-items: center;
+    // border: 1px solid white;
+    color: white;
+    // margin-bottom: 32px;
+    // padding: 8px;
+
+    div {
+        flex: 1;
+    }
+
+    .greeting {
+        display: flex;
+        gap: 16px;
+
+        // background-color: black;
+
+        img {
+            margin-left: 32px;
+            max-width: 73px;
+            border-radius: 50%;
+        }
+
+        .greeting-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            font-weight: bolder;
+        }
+    }
+
+    .buttons {
+        // background-color: blue;
+        margin-left: 55px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            width: 130px;
+            height: 50px;
+            border-radius: 18px;
+            border: none;
+            font-size: 1.1rem;
+            background-color: #1d4ed8;
+            color: white;
+        }
+        button:active {
+            transform: scale(0.9);
+        }
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    .content {
+        padding: 16px;
+        // background-color: blueviolet;
+
+        display: grid;
+        grid-template-rows: auto 1fr;
+
+        h2 {
+            // padding: 16px;
+            width: 80%;
+            margin-left: 22px;
+            // background-color: green;
+        }
+
+        .projects {
+            padding: 16px;
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+
+            .project-card {
+                // background-image: linear-gradient(red, yellow);
+                background-color: #292524;
+                height: 300px;
+                border-radius: 18px;
+            }
+        }
     }
 }
